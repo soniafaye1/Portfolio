@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useFormik } from "formik";
+//import { useFormik } from "formik";
 import {
   Box,
   Button,
@@ -12,7 +12,7 @@ import {
   Textarea,
   VStack,
 } from "@chakra-ui/react";
-import * as Yup from "yup";
+//import * as Yup from "yup";
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/alertContext";
@@ -21,11 +21,11 @@ const LandingSection = () => {
   const { isLoading, response, submit } = useSubmit();
   const { onOpen } = useAlertContext();
 
-  const formik = useFormik({
-    initialValues: {},
-    onSubmit: (values) => {},
-    validationSchema: Yup.object({}),
-  });
+  // const formik = useFormik({
+  //   initialValues: {},
+  //   onSubmit: (values) => {},
+  //   validationSchema: Yup.object({}),
+  // });
 
   return (
     <FullScreenSection
