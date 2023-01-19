@@ -1,27 +1,30 @@
 import React, { useEffect, useRef } from "react";
-//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-//import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-/*import {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
   faGithub,
   faLinkedin,
   faMedium,
   faStackOverflow,
-} from "@fortawesome/free-brands-svg-icons"; */
+} from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
 
 const socials = [
-  // {
-  //   icon: faEnvelope,
-  //   url: "mailto: hello@example.com",
-  // },
-  // {
-  //   icon: faGithub,
-  //   url: "https://github.com",
-  // },
-  // {
-  //   icon: faLinkedin,
-  //   url: "https://www.linkedin.com",
-  // },
+  {
+    icon: faEnvelope,
+    url: "mailto: sonia.slobodsky@mail.mcgill.ca",
+    title: "Email",
+  },
+  {
+    icon: faGithub,
+    url: "https://github.com/soniafaye1",
+    title: "GitHub",
+  },
+  {
+    icon: faLinkedin,
+    url: "https://www.linkedin.com/in/sonia-slobodsky/",
+    title: "LinkedIn",
+  },
   // {
   //   icon: faMedium,
   //   url: "https://medium.com",
@@ -63,7 +66,15 @@ const Header = () => {
           justifyContent="space-between"
           alignItems="center"
         >
-          <nav>{/* Add social media links based on the `socials` data */}</nav>
+          <nav>
+            {socials.map((item, idx) => {
+              return (
+                <a href={item.url} key={idx}>
+                  <FontAwesomeIcon icon={item.icon} size="2x" />
+                </a>
+              );
+            })}
+          </nav>
           <nav>
             <HStack spacing={8}>
               {/* Add links to Projects and Contact me section */}
