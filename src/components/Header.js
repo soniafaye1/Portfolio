@@ -1,12 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faLinkedin,
-  faMedium,
-  faStackOverflow,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
 
 const socials = [
@@ -25,14 +20,6 @@ const socials = [
     url: "https://www.linkedin.com/in/sonia-slobodsky/",
     title: "LinkedIn",
   },
-  // {
-  //   icon: faMedium,
-  //   url: "https://medium.com",
-  // },
-  // {
-  //   icon: faStackOverflow,
-  //   url: "https://stackoverflow.com",
-  // },
 ];
 
 const Header = () => {
@@ -77,7 +64,20 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              {/* Add links to Projects and Contact me section */}
+              <a
+                id="contactme-section"
+                href="/#contact-me"
+                onClick={handleClick()}
+              >
+                <h3>Contact Me</h3>
+              </a>
+              <a
+                id="projects-section"
+                href="/#projects"
+                onClick={handleClick()}
+              >
+                <h3>Projects</h3>
+              </a>
             </HStack>
           </nav>
         </HStack>
